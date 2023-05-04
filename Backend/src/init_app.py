@@ -5,7 +5,7 @@ import os
 import datetime
 from flask import Flask
 from flask_migrate import Migrate
-from source.models import SQLDB, BCRYPT
+from src.models import SQLDB, BCRYPT
 
 # App Configurations
 class CommonConfig(object):
@@ -54,7 +54,7 @@ def create_app():
 APP = create_app()
 
 # API Endpoints
-from source.views.employee_view import muvid_api
+from src.views.employee_view import muvid_api
 APP.register_blueprint(muvid_api, url_prefix='/api/v1/employees')
 
 # Run as a script

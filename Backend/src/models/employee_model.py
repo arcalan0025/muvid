@@ -6,7 +6,7 @@ from sqlalchemy.schema import CheckConstraint
 from marshmallow import fields, Schema
 from faker import Faker
 from datetime import datetime
-from source.models import SQLDB, BCRYPT
+from src.models import SQLDB, BCRYPT
 current_datetime = datetime.now()
 formatted_datetime = current_datetime.strftime("%d-%m-%Y %H:%M:%S")
 
