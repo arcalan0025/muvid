@@ -6,10 +6,13 @@ from sqlalchemy.schema import CheckConstraint
 from marshmallow import fields, Schema
 from faker import Faker
 from datetime import datetime
-from src.models import SQLDB, BCRYPT
+from flask_sqlalchemy import SQLAlchemy
 current_datetime = datetime.now()
 formatted_datetime = current_datetime.strftime("%d-%m-%Y %H:%M:%S")
 
+SQLDB = SQLAlchemy()
+
+# Employee Model
 class EmployeeModel(SQLDB.Model):
     '''
     Employee Model
