@@ -7,6 +7,7 @@ from flask import Flask
 from flask_migrate import Migrate
 from src.models import SQLDB, BCRYPT
 
+basedir = os.path.abspath(os.path.dirname(__file__))
 # App Configurations
 class CommonConfig(object):
 
@@ -19,8 +20,7 @@ class CommonConfig(object):
 
     # SQL-Alchemy
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-
-    SQLALCHEMY_DATABASE_URI = f'sqlite://{("muvid_user")}:{("muvid_pass")}@{("192.168.2.242")}:{("5432")}/{("muvid")}'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///'+os.path.join(basedir,'data.sqlite')
 
     SQLALCHEMY_BINDS = {
         'backend': SQLALCHEMY_DATABASE_URI,
