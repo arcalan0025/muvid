@@ -188,7 +188,7 @@ APP = create_app()
 # -------------------------------------------------------
 # API-routes
 # -------------------------------------------------------
-from src.views.employee_view import muvid_api
+from Backend.views.employee_view import muvid_api
 APP.register_blueprint(muvid_api, url_prefix='/api/v1/employees', name = 'employees')
 
 migrate = Migrate()
