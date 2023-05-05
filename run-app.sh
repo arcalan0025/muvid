@@ -7,4 +7,4 @@ export USE_SENTRY=False
 export SECRET_KEY=secret-6Jw5MhtGswFdGN7UKt8s
 export MAIL_SENDGRID_API_KEY=dummykey
 
-python -m src.init_app
+python -m app

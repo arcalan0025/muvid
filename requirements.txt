@@ -1,0 +1,16 @@
+numpy
+pandas
+flask
+pyaml
+marshmallow
+sqlalchemy
+flask_migrate
+flask_script
+flask_restful
+flasgger
+requests
+itsdangerous
+scikit-learn
+joblib
+datetime
+sklearn
